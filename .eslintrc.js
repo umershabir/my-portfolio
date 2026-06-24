@@ -1,10 +1,14 @@
 module.exports = {
   root: true,
-  extends: ['standard'],
+  extends: ["standard"],
   globals: {
-    'IS_DEVELOPMENT': 'readonly'
+    IS_DEVELOPMENT: "readonly",
   },
-  parserOptions: {
-    ecmasVersion: 2020
-  }
-}
+  parsetOptions: {
+    ecmasVersion: 2020,
+  },
+  rules: {
+    "arrow-parens": ["error", "always"],
+    "no-extra-parens": "off",
+  },
+};

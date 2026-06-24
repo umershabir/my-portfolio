@@ -27,7 +27,6 @@
 }
 
 .collections__titles__wrapper {
-
 }
 
 .collections__titles__label {
@@ -107,7 +106,7 @@
 .collections__content {
   @extend %cover;
 
-  @include media('<phone') {
+  @include media("<phone") {
     display: none;
   }
 }
@@ -139,6 +138,7 @@
 
 .collections__article__description {
   @extend %description-18;
+  max-width: 44rem;
 
   span {
     display: inline-block;
@@ -183,7 +183,7 @@
   display: none;
   position: absolute;
 
-  @include media('<phone') {
+  @include media("<phone") {
     display: flex;
   }
 }

@@ -6,7 +6,7 @@
           figure.about__gallery__media
             img.about__gallery__media__image(alt=media.image.alt data-src=media.image.url)
 
-    each section, index in about.data.body  
+    each section, index in about.data.body
       if section.slice_type == 'title'
         h2.about__title(data-animation="paragraph")!=section.primary.text.replace(/\n/g, '<br>')
 
@@ -24,10 +24,15 @@
       if section.slice_type == 'highlight'
         section.about__highlight
           .about__highlight__wrapper
-            a.about__highlight__link(
-              href=section.primary.link.url
-              target="_blank"
-            )
+            a.about__highlight__link
+              if section.primary.label
+                p.about__highlight__label(data-animation='label')=section.primary.label
+
+              h3.about__highlight__title(data-animation='highlight')=section.primary.title
+            //- a.about__highlight__link(
+            //-   href=section.primary.link.url
+            //-   target="_blank"
+            //- )
               if section.primary.label
                 p.about__highlight__label(data-animation="paragraph")=section.primary.label
 
@@ -45,7 +50,3 @@
               figure.about__gallery__media
                 img.about__gallery__media__image(alt=media.image.alt data-src=media.image.url)
 
-    footer.about__footer
-      .about__footer__copyright!=about.data.footer_copyright
-
-      .about__footer__credits!=PrismicDOM.RichText.asHtml(about.data.footer_credits)
