@@ -77,8 +77,6 @@
 
 /*! ./MediaDOM */
 
-/*! ./Titles */
-
 /*! ./Transform.js */
 
 /*! ./UserAgent_DEPRECATED */
